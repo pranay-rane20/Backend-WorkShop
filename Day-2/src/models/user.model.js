@@ -20,7 +20,9 @@ const userSchema = new mongoose.Schema({
 });
 
 // userSchema.statics
+
 // userSchema.methods
+
 
 //generate hashpassword
 userSchema.statics.hashPassword = async (password)=>{
