@@ -17,5 +17,6 @@ module.exports.createUser = async ({username,email,password})=>{
         email,
         password:hashedpass
     })
+    delete user._doc.password;
     return user;
 }
