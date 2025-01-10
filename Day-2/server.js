@@ -6,7 +6,6 @@ connect();
 
 const server = http.createServer(app)
 
-
 server.listen(config.PORT,()=>{
     console.log("server is running on port 3000")
 })
