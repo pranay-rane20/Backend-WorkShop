@@ -5,7 +5,6 @@ const config = require('./src/config/config');
 const connect = require('./src/db/db');
 connect();
 
-
 const server = http.createServer(app)
 
 server.listen(config.PORT,()=>{
