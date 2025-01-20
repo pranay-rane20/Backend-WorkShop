@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const config = require('../config/config');
 
 function connect(){
-    return mongoose.connect(config.MONGODB_URI)
+    return mongoose.connect(config.MONGO_URI)
         .then(() => {
             console.log('Connected to MongoDB');
         })
