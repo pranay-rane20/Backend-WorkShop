@@ -3,16 +3,13 @@ const userService = require('../services/user.service')
 const {validationResult} = require('express-validator')
 
 module.exports.registerUserController = async(req,res)=>{
-
     const errors = validationResult(req)
 
     if(!errors.isEmpty()){
         return res.status(400).json({error:errors.array()})
     }
-
     try {
         const {username,email,password} = req.body;
-
         const user = await userService.createUser({
             username,
             email,
